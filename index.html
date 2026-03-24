@@ -1,0 +1,564 @@
+<index.html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>+CLICK Marketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --color-principal:#0f172a;
+    --color-secundario:#1e293b;
+    --color-acento:#38bdf8;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--color-principal);
+    color:white;
+}
+
+.header{
+    background:url('portada.png') center/cover no-repeat;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.title{font-size:80px;font-weight:700;}
+.subtitle{font-size:22px;opacity:0.8;}
+
+.intro{margin-top:180px;max-width:700px;}
+
+.packages{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;padding:80px 20px;}
+
+.card{background:linear-gradient(145deg,#1e293b,#0f172a);padding:30px;border-radius:20px;width:300px;box-shadow:0 20px 40px rgba(0,0,0,0.5);}
+
+.services{text-align:center;padding:60px 20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;}
+
+/* CHATBOT REAL */
+.chatbot-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:70px;
+    cursor:pointer;
+}
+
+.chatbox{
+    position:fixed;
+    bottom:100px;
+    right:20px;
+    width:300px;
+    background:#1e293b;
+    border-radius:15px;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.chat-header{
+    background:var(--color-acento);
+    padding:10px;
+    font-weight:bold;
+}
+
+.chat-messages{
+    padding:10px;
+    height:200px;
+    overflow-y:auto;
+}
+
+.chat-input{
+    display:flex;
+}
+
+.chat-input input{
+    flex:1;
+    padding:10px;
+    border:none;
+}
+
+.chat-input button{
+    background:var(--color-acento);
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+.message{margin:5px 0;}
+.user{text-align:right;color:#38bdf8;}
+.bot{text-align:left;color:white;}
+
+.footer{text-align:center;padding:30px;}
+
+</style>
+</head>
+
+<body>
+
+<section class="header">
+<div class="title">+CLICK</div>
+<div class="subtitle">agencia de marketing digital</div>
+<div class="intro">
+Impulsamos marcas con estrategias digitales innovadoras.
+</div>
+</section>
+
+<!-- CHATBOT -->
+<img src="chatbot.png" class="chatbot-btn" onclick="toggleChat()">
+
+<div class="chatbox" id="chatbox">
+    <div class="chat-header">Asistente +CLICK 🤖</div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+
+<script>
+function toggleChat(){
+    let box = document.getElementById('chatbox');
+    box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+    box.style.flexDirection = 'column';
+
+    if(box.style.display === 'flex'){
+        addBotMessage("¡Hola! 👋 Soy el asistente de +CLICK. ¿Te interesa algún paquete?");
+    }
+}
+
+function addBotMessage(text){
+    let messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='message bot'>${text}</div>`;
+}
+
+function addUserMessage(text){
+    let messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='message user'>${text}</div>`;
+}
+
+function sendMessage(){
+    let input = document.getElementById('userInput');
+    let text = input.value;
+
+    if(text === "") return;
+
+    addUserMessage(text);
+    input.value = "";
+
+    setTimeout(()=>{
+        responder(text.toLowerCase());
+    },500);
+}
+
+function responder(text){
+
+    if(text.includes("paquete")){
+        addBotMessage("Tenemos 3 paquetes: Básico $700, Intermedio $1500 y Premium $2500. ¿Cuál te interesa?");
+    }
+    else if(text.includes("precio") || text.includes("costo")){
+        addBotMessage("Nuestros precios van desde $700 hasta $2500 dependiendo el paquete.");
+    }
+    else if(text.includes("contratar")){
+        addBotMessage("¡Excelente! Te llevaré a WhatsApp para continuar.");
+        setTimeout(()=>{
+            window.open("https://wa.me/524494653160");
+        },1500);
+    }
+    else{
+        addBotMessage("Puedo ayudarte con paquetes, precios o contratación 😊");
+    }
+}
+</script>
+
+<footer class="footer">
+<a href="<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>+CLICK Marketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --color-principal:#0f172a;
+    --color-secundario:#1e293b;
+    --color-acento:#38bdf8;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--color-principal);
+    color:white;
+}
+
+.header{
+    background:url('portada.png') center/cover no-repeat;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.title{font-size:80px;font-weight:700;}
+.subtitle{font-size:22px;opacity:0.8;}
+
+.intro{margin-top:180px;max-width:700px;}
+
+.packages{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;padding:80px 20px;}
+
+.card{background:linear-gradient(145deg,#1e293b,#0f172a);padding:30px;border-radius:20px;width:300px;box-shadow:0 20px 40px rgba(0,0,0,0.5);}
+
+.services{text-align:center;padding:60px 20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;}
+
+/* CHATBOT REAL */
+.chatbot-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:70px;
+    cursor:pointer;
+}
+
+.chatbox{
+    position:fixed;
+    bottom:100px;
+    right:20px;
+    width:300px;
+    background:#1e293b;
+    border-radius:15px;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.chat-header{
+    background:var(--color-acento);
+    padding:10px;
+    font-weight:bold;
+}
+
+.chat-messages{
+    padding:10px;
+    height:200px;
+    overflow-y:auto;
+}
+
+.chat-input{
+    display:flex;
+}
+
+.chat-input input{
+    flex:1;
+    padding:10px;
+    border:none;
+}
+
+.chat-input button{
+    background:var(--color-acento);
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+.message{margin:5px 0;}
+.user{text-align:right;color:#38bdf8;}
+.bot{text-align:left;color:white;}
+
+.footer{text-align:center;padding:30px;}
+
+</style>
+</head>
+
+<body>
+
+<section class="header">
+<div class="title">+CLICK</div>
+<div class="subtitle">agencia de marketing digital</div>
+<div class="intro">
+Impulsamos marcas con estrategias digitales innovadoras.
+</div>
+</section>
+
+<!-- CHATBOT -->
+<img src="chatbot.png" class="chatbot-btn" onclick="toggleChat()">
+
+<div class="chatbox" id="chatbox">
+    <div class="chat-header">Asistente +CLICK 🤖</div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+
+<script>
+function toggleChat(){
+    let box = document.getElementById('chatbox');
+    box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+    box.style.flexDirection = 'column';
+
+    if(box.style.display === 'flex'){
+        addBotMessage("¡Hola! 👋 Soy el asistente de +CLICK. ¿Te interesa algún paquete?");
+    }
+}
+
+function addBotMessage(text){
+    let messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='message bot'>${text}</div>`;
+}
+
+function addUserMessage(text){
+    let messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='message user'>${text}</div>`;
+}
+
+function sendMessage(){
+    let input = document.getElementById('userInput');
+    let text = input.value;
+
+    if(text === "") return;
+
+    addUserMessage(text);
+    input.value = "";
+
+    setTimeout(()=>{
+        responder(text.toLowerCase());
+    },500);
+}
+
+function responder(text){
+
+    if(text.includes("paquete")){
+        addBotMessage("Tenemos 3 paquetes: Básico $700, Intermedio $1500 y Premium $2500. ¿Cuál te interesa?");
+    }
+    else if(text.includes("precio") || text.includes("costo")){
+        addBotMessage("Nuestros precios van desde $700 hasta $2500 dependiendo el paquete.");
+    }
+    else if(text.includes("contratar")){
+        addBotMessage("¡Excelente! Te llevaré a WhatsApp para continuar.");
+        setTimeout(()=>{
+            window.open("https://wa.me/521XXXXXXXXXX");
+        },1500);
+    }
+    else{
+        addBotMessage("Puedo ayudarte con paquetes, precios o contratación 😊");
+    }
+}
+</script>
+
+<footer class="footer">
+<a href="#"><img src="tiktok.png" width="40"></a>
+<a href="#"><img src="facebook.png" width="40"></a>
+</footer>
+
+</body>
+</html>
+<a href="<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>+CLICK Marketing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --color-principal:#0f172a;
+    --color-secundario:#1e293b;
+    --color-acento:#38bdf8;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:var(--color-principal);
+    color:white;
+}
+
+.header{
+    background:url('portada.png') center/cover no-repeat;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.title{font-size:80px;font-weight:700;}
+.subtitle{font-size:22px;opacity:0.8;}
+
+.intro{margin-top:180px;max-width:700px;}
+
+.packages{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;padding:80px 20px;}
+
+.card{background:linear-gradient(145deg,#1e293b,#0f172a);padding:30px;border-radius:20px;width:300px;box-shadow:0 20px 40px rgba(0,0,0,0.5);}
+
+.services{text-align:center;padding:60px 20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;}
+
+/* CHATBOT REAL */
+.chatbot-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:70px;
+    cursor:pointer;
+}
+
+.chatbox{
+    position:fixed;
+    bottom:100px;
+    right:20px;
+    width:300px;
+    background:#1e293b;
+    border-radius:15px;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+.chat-header{
+    background:var(--color-acento);
+    padding:10px;
+    font-weight:bold;
+}
+
+.chat-messages{
+    padding:10px;
+    height:200px;
+    overflow-y:auto;
+}
+
+.chat-input{
+    display:flex;
+}
+
+.chat-input input{
+    flex:1;
+    padding:10px;
+    border:none;
+}
+
+.chat-input button{
+    background:var(--color-acento);
+    border:none;
+    padding:10px;
+    cursor:pointer;
+}
+
+.message{margin:5px 0;}
+.user{text-align:right;color:#38bdf8;}
+.bot{text-align:left;color:white;}
+
+.footer{text-align:center;padding:30px;}
+
+</style>
+</head>
+
+<body>
+
+<section class="header">
+<div class="title">+CLICK</div>
+<div class="subtitle">agencia de marketing digital</div>
+<div class="intro">
+Impulsamos marcas con estrategias digitales innovadoras.
+</div>
+</section>
+
+<!-- CHATBOT -->
+<img src="chatbot.png" class="chatbot-btn" onclick="toggleChat()">
+
+<div class="chatbox" id="chatbox">
+    <div class="chat-header">Asistente +CLICK 🤖</div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+
+<script>
+function toggleChat(){
+    let box = document.getElementById('chatbox');
+    box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+    box.style.flexDirection = 'column';
+
+    if(box.style.display === 'flex'){
+        addBotMessage("¡Hola! 👋 Soy el asistente de +CLICK. ¿Te interesa algún paquete?");
+    }
+}
+
+function addBotMessage(text){
+    let messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='message bot'>${text}</div>`;
+}
+
+function addUserMessage(text){
+    let messages = document.getElementById('messages');
+    messages.innerHTML += `<div class='message user'>${text}</div>`;
+}
+
+function sendMessage(){
+    let input = document.getElementById('userInput');
+    let text = input.value;
+
+    if(text === "") return;
+
+    addUserMessage(text);
+    input.value = "";
+
+    setTimeout(()=>{
+        responder(text.toLowerCase());
+    },500);
+}
+
+function responder(text){
+
+    if(text.includes("paquete")){
+        addBotMessage("Tenemos 3 paquetes: Básico $700, Intermedio $1500 y Premium $2500. ¿Cuál te interesa?");
+    }
+    else if(text.includes("precio") || text.includes("costo")){
+        addBotMessage("Nuestros precios van desde $700 hasta $2500 dependiendo el paquete.");
+    }
+    else if(text.includes("contratar")){
+        addBotMessage("¡Excelente! Te llevaré a WhatsApp para continuar.");
+        setTimeout(()=>{
+            window.open("https://wa.me/524494653160");
+        },1500);
+    }
+    else{
+        addBotMessage("Puedo ayudarte con paquetes, precios o contratación 😊");
+    }
+}
+</script>
+
+<footer class="footer">
+<a href="#"><img src="tiktok.png" width="40"></a>
+<a href="#"><img src="facebook.png" width="40"></a>
+</footer>
+
+</body>
+</html>
+<a href="https://www.tiktok.com/@masclickags?_r=1&_t=ZS-94"><img src="tiktok.png" width="40"></a>
+<a href="https://www.facebook.com/?locale=es_LA"><img src="facebook.png" width="40"></a>
+</footer>
+
+</body>
+</html>
